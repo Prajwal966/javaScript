@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <div class="parent">
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thrusday</div>
+    </div>
+  </body>
+  <script>
+    // parent to child calling
+    const parent = document.querySelector(".parent");
+    console.log(parent);
+    console.log(parent.children[1].innerHTML);
+    for (let i = 0; i < parent.children.length; i++)
+      console.log(parent.children[i].innerHTML);
+
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+
+    // child to parent calling
+    const dayOne = document.querySelector(".day");
+    console.log(dayOne.parentElement);
+
+    // create Element
+    const div = document.createElement("div");
+    div.className = "main";
+    div.innerText = "Prajwal Soni";
+    div.style.backgroundColor = "green";
+    div.style.color = "orange";
+    div.style.padding = "10px";
+    document.body.appendChild(div);
+  </script>
+</html>
